@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
+  <div class="container" id="container">
 
     <aside>
         <div class="top-part">
@@ -37,34 +37,32 @@
    <div class="main"> 
 
    
-    <div class="item">
+    <div class="item" id="AddBook">
         <i class="fa-solid fa-plus"></i>
     </div>
-
-
-    <div class="overlay-input">
-        <form action="" method="post">
-            <label for="title">Title:</label>
-            <input type="text" id="title" name="title">
-            <label for="author">Authors:</label>
-            <input type="text" id="authors" name="author"> 
-            <label for="progress"></label>
-         <input type="range" name="progress" id="progress" min="0" >
-         <button >Add book </button>
-        </form>
-      </div>
-
-    <div class="book-list"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
+   
 </div>
   </div>
+  
+  <div class="input-container" id="form">
+  <div class="overlay-input">
+    <form action="" method="post">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title">
+        <label for="author">Authors:</label>
+        <input type="text" id="author" name="author"> 
+        <label for="isbn">Progress:</label>
+     <input type="number" name="progress" id="progress" min="0" >
+     <button id="add-btn" >Add book </button>
+    </form>
+    </div>
+  </div>
 
+  <!-- JavaScript Part -->
+  <script src="script.js"></script> 
 
-    
   <!-- For Icon -->
   <script src="https://kit.fontawesome.com/6a0ebd92fb.js" crossorigin="anonymous"></script>
+  
 </body>
 </html>
