@@ -121,7 +121,7 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
 
-input{
+ input{
     margin: 10px;
     border-radius: 5px;
     width: 180px;
@@ -129,7 +129,16 @@ input{
     border: none;
 }
 
+
 label{
     width: 200px;
     padding-left: 20px;
+} 
+button{
+    width: 100px;
+    height: 25px;
+    border-radius: 4px;
+    border: none;
+    margin-left: 60px;
+    margin-right: 10px;
 }
