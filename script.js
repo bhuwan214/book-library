@@ -6,6 +6,8 @@ const Container = document.getElementById("container")
 const  Div_Form = document.getElementById("form")
 const AddSection = document.getElementById("AddBook")
 
+
+//Getting the Input filed and blurring other content on the site
 AddSection.addEventListener('click',()=>{
 
     Container.style.zIndex=0;
