@@ -9,32 +9,9 @@
 <body>
   <div class="container" id="container">
 
-    <aside>
-        <div class="top-part">
-            <h2> Library System </h2>
-        </div>
-<!--         
-        <div class="nav-icon">
-             <a href="#" class="home">
-            <i class="fa-solid fa-house"></i>
-            <span>Home</span>
-           </a> 
+    <header> <h2> Library System </h2> </header>
     
-           <a href="#" class="favorite">
-            <i class="fa-regular fa-star"></i>
-            <span>Favorites</span>
-        </a>
-           <a href="#" class="library">
-            <i class="fa-solid fa-book"></i>
-            <span>Library</span>
-           </a>
-        </div> -->
-      
-    </aside>
-
-    <header></header>
-    
-   <div class="main"> 
+   <div class="main" id="main"> 
 
    
     <div class="item" id="AddBook">
@@ -48,12 +25,12 @@
   <div class="overlay-input">
     <form action="" method="post">
         <label for="title">Title:</label>
-        <input type="text" id="title" name="title">
+        <input type="text" id="title" name="title" >
         <label for="author">Authors:</label>
         <input type="text" id="author" name="author"> 
-        <label for="isbn">Progress:</label>
+        <label for="progress">Progress:</label>
      <input type="number" name="progress" id="progress" min="0" >
-     <button id="add-btn" >Add book </button>
+     <div class="button" id="add-btn" >Add book </div>
     </form>
     </div>
   </div>
