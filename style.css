@@ -76,18 +76,32 @@ gap: 30px;
 display: flex;
 justify-content: center;
 align-items: center;
+gap: 20px;
 
 }
 
+.plusBtn{
+       
+    position: fixed;
+    right: 0%;
+    bottom: 0%;
+    transform: translate(-50%,-50%);
+    background-color:chocolate;
+    width: 80px;
+    height: 80px;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius:  40px;
+
+}
 
 
 .fa-solid {
     font-size: 60px;
 }
 
-.fa-solid:hover{
-    font-size:90px;
-}
+
 
 
 .input-container{

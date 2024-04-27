@@ -10,6 +10,15 @@ const Addbtn =document.getElementById("add-btn")
 const item =document.getElementsByClassName("item")
 
 
+const BookDetail ={
+    title:"The Lord of the Rings",
+    author:  "J.R.R Tolkien",
+    pages:320,
+
+}
+
+
+
 
 
 //Getting the Input filed and blurring other content on the site
@@ -22,10 +31,14 @@ AddSection.addEventListener('click',()=>{
 
 
 
+
+
     AddBtn.addEventListener( "click", () => {
         
         //Creating a div inside the main-div
         const newDiv=document.createElement("div")
+        var content = document.createTextNode(`Title:${BookDetail.title}  Author : ${BookDetail.author}`);
+        newDiv.appendChild(content);
         Main_Div.appendChild(newDiv)
     
         Div_Form.classList.add("input-container");
@@ -33,31 +46,33 @@ AddSection.addEventListener('click',()=>{
 
         
         //Giving the newly created div class name
-        for( let i=1; i<=1000; i++){
+        for( let i=0; i<=1000; i++){
             AddbookHandle()
       const children= Main_Div.children[i]
         children.classList.add("item")
         children.id=`item${i}`
-        item.innerHTML= "title : " + titleValue + "\nAuthor: "+authorValue;
 
     }
 
   
       
     })
-    const output = document.getElementById('output');
+
+    const output = document.getElementById('item1');
 
 
     //Adding book-data to document
-     
+ 
+    
+    
     function AddbookHandle(){
        
         const titleValue = titleField.value
         const authorValue = authorField.value
-     }
-
+                // output.innerHTML= "title : " + titleValue + "\nAuthor: "+authorValue;
     
-
+     }
+    
 
 
 
