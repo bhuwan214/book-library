@@ -58,12 +58,8 @@ OutputAuthor.innerHTML = `${BookDetail.author}`;
 AddBtn.addEventListener("click", () => {
   //Creating a div inside the main-div
   const newDiv = document.createElement("div");
-//   var content = document.createTextNode(
-//     `${Book1.title} by ${Book1.author} Progress: ${parseInt(Book1.readPages/Book1.pages*100)}%`
-//   );
-//   newDiv.appendChild(content);
 
-
+  
 //Adding data inside the item container
 for (let i=0; i<3; i++){
 const newH4 = document.createElement( "h4" ) ;
@@ -88,7 +84,7 @@ else {
 
   //Giving the newly created div class name
   for (let i = 0; i <= 1000; i++) {
-    
+    console.log("hello")
     const children = Main_Div.children[i];
     children.classList.add("item");
     children.id = `item${i}`;
