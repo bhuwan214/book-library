@@ -29,32 +29,33 @@ function ShowformModal(){
     Div_Form.classList.remove("input-container");
 }
 
-for (i=count;i<count;){
 
 
-const  newDiv = document.createElement('div')
 
 
 function RemoveformModal (){
     Div_Form.classList.add("input-container");
     Container.style.opacity = 1;
-    // const  newDiv = document.createElement('div')
-
-
 }
 
 
 AddSection.addEventListener("click", () => {
     ShowformModal()
     // const  newDiv = document.createElement('div')
-    newDiv.setAttribute('class','item');
-    Main_Div.appendChild(newDiv);
+  
     });
+
+
  
-    
+    for ( i=count; i<count+1; i++){
+        const  newDiv = document.createElement('div')
+        newDiv.setAttribute('class','item');
+        Main_Div.appendChild(newDiv);
+
     AddBtn.addEventListener("click", ()=>{
         
         RemoveformModal()
+
 
          //Get values from input fields
         const  TitleValue = titleField.value;
@@ -91,11 +92,18 @@ AddSection.addEventListener("click", () => {
     TotalPages.value="";
     ReadPages.value="";
 
-    count++
+    for (let i = 0; i <= 1000; i++) {
+        console.log("hello")
+        const children = Main_Div.children[i];
+        children.classList.add("item");
+        children.id = `item${i}`;
+      }
+      
+      count++
 
     })
 
-}
+    }
 
 
 // AddBtn.addEventListener("click", ()=>{
