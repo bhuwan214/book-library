@@ -11,6 +11,9 @@ const TotalPages =document.getElementById('TotalPage')
 const ReadPages =document.getElementById('PageRead') 
 const OutputTitle = document.getElementById("titleName")
 const OutputAuthor = document.getElementById("authorName")
+const DeleteSample =document.getElementById("clear-btn1")
+const item1 = document.getElementById("item1");
+
 
 
 //BookDetail constructor
@@ -62,19 +65,50 @@ const Book2 = new Book (TitleValue, AuthorValue, TotalPgValue, ReadPgValue);
 
 //Adding data inside the item container
 
-for (let i=0; i<3; i++){
-const newH4 = document.createElement( "h4" ) ;
-if (i==0){
+for (let i=0; i<=4; i++){
+ 
+  if (i==0){
+    const newH3 =document.createElement("h3")
+    newH3.textContent="Book Details "
+    newDiv.appendChild(newH3)
+  } 
+if (i==1){
+  const newH4 = document.createElement( "h4" )
 newH4.setAttribute('id','titleName')
-newH4.innerHTML = `Title: ${ Book2.title}`}
-else if(i ==1) {
+newH4.innerHTML = `Title: ${ Book2.title}`
+newDiv.appendChild(newH4)
+}
+
+else if(i ==2) {
+  const newH4 = document.createElement( "h4" )
 newH4.setAttribute('id','authorName')
-newH4.innerHTML =`Authors: ${ Book2.author}`}
-else {
+newH4.innerHTML =`Authors: ${ Book2.author}`
+newDiv.appendChild(newH4)
+
+}
+
+else if (i==3){
+  const newH4 = document.createElement( "h4" )
     newH4.setAttribute('id', 'Progress-data')
     newH4.innerHTML=`Progress: ${Math.floor((Book2.readPages/ Book2.totalPages)*100)}%`;
+    newDiv.appendChild(newH4)
+
   }
- newDiv.appendChild(newH4)
+
+  else if(i==4){
+    const ClearBtn = document.createElement("div")
+    ClearBtn.classList.add("clear-btn");
+  ClearBtn.innerHTML= "Delete"
+    newDiv.appendChild(ClearBtn)
+
+    //Event Listener for clear button
+    ClearBtn.addEventListener("click", ()=>{
+      newDiv.remove()
+    })
+
+  }
+
+
 }
 
 //Appending child newDiv to Main 
@@ -97,10 +131,13 @@ else {
   }
 
   
-
-  
 });
 
+
+DeleteSample.addEventListener("click", ()=>{
+
+item1.style.display = "none" ;
+})
 
   
 
